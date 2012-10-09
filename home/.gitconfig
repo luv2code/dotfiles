@@ -1,0 +1,13 @@
+[gui]
+[user]
+	email = luv2code@gmail.com
+	name = Matthew Taylor
+[alias]
+	sb = status -sb
+	tf = tfs fetch
+	ct = tfs checkintool
+	hard = reset --hard
+	a = add .
+	coma = commit -a -m
+	com = commit -m
+    today = log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative
