@@ -34,6 +34,8 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+xmodmap ~/.dotfiles/home/.speedswapper
+
 # Customize to your needs...
 alias la='ls -la'
 
