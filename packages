@@ -5,3 +5,9 @@ nodejs
 chrome
 go
 dropbox
+zsh
+build-essential
+curl
+ctags
+default-jdk
+easystroke
