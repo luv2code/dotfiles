@@ -10,4 +10,5 @@ build-essential
 curl
 ctags
 default-jdk
-easystroke
+easystroke - keyboard macros
+throttle - network throttle browsers and such
