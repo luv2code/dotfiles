@@ -13,3 +13,8 @@
     today = log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative
 [credential]
 	helper = cache --timeout=3600
+[merge]
+	tool = meld
+    conflictstyle = diff3
+[mergetool "meld"]
+    cmd = meld --diff $BASE $LOCAL --diff $BASE $REMOTE --diff $LOCAL $BASE $REMOTE $MERGED
