@@ -13,6 +13,7 @@
 	com = commit -m
     today = log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative
     ci = tf checkin --associate
+    tp = tf pull --deep --rebase
 [credential]
 	helper = cache --timeout=3600
 [merge]
