@@ -12,12 +12,18 @@
 	coma = commit -a -m
 	com = commit -m
     today = log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative
-    ci = tf checkin --deep --associate
-    tp = tf pull --rebase
+    ci = tf checkin
+    cia = tf checkin --associate
+    tp = tf pull --rebase --deep
 [credential]
 	helper = cache --timeout=3600
 [merge]
-	tool = mymeld
+	tool = p4merge
    	conflictstyle = diff3
+[mergetool "p4merge"]
+    cmd = p4merge $BASE $LOCAL $REMOTE $MERGED
+    trustExitCode = false
+    keepBackup = false
+    prompt = false
 [mergetool "mymeld"]
 	cmd = meld $LOCAL $BASE $REMOTE $MERGED 
