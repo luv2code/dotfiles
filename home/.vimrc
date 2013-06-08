@@ -1,5 +1,7 @@
 set nocompatible
 set encoding=utf-8
+set backupdir=./.backup,/tmp,/home/matt/.backup
+set directory=.,/home/matt/.backup,./.backup,/tmp
 let mapleader = ","
 " inoremap jj <Esc>
 " nnoremap JJJJ <Nop>
