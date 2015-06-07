@@ -2,7 +2,7 @@ set nocompatible
 set encoding=utf-8
 set backupdir=./.backup,/tmp,/home/matt/.backup
 set directory=.,/home/matt/.backup,./.backup,/tmp
-let mapleader = ","
+let mapleader = "\<Space>"
 " inoremap jj <Esc>
 " nnoremap JJJJ <Nop>
 " let NERDTreeDirArrows=0
