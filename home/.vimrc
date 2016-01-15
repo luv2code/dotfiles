@@ -16,7 +16,7 @@ set bs=2
 set background=dark
 set wrapmargin=8
 set ruler
-set guifont=Consolas\ 13
+set guifont=Consolas\ 7 
 syntax on
 "colorscheme badwolf
 set number
@@ -64,3 +64,4 @@ imap <C-Space> <C-x><C-o>
 call pathogen#infect()
 call pathogen#helptags()
 colorscheme Tomorrow-Night
+highlight LineNr guifg=#AAAAAA

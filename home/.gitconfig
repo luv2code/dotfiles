@@ -35,3 +35,5 @@
 	cmd = meld $LOCAL $BASE $REMOTE $MERGED 
 [push]
     #default = simple
+[push]
+	default = simple

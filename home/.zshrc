@@ -32,7 +32,7 @@ export TERM=xterm-256color
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git bower coffee debian golang node npm vi-mode)
+plugins=(git bower coffee debian golang node npm vi-mode history)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -42,3 +42,5 @@ alias la='ls -la'
 if [[ -f ~/.zshrclocal ]]; then
     source ~/.zshrclocal
 fi
+bindkey '^[[A' up-line-or-search
+bindkey '^[[B' down-line-or-search
