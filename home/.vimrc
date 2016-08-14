@@ -16,7 +16,7 @@ set bs=2
 set background=dark
 set wrapmargin=8
 set ruler
-set guifont=Consolas\ 8 
+set guifont=Consolas\ 10 
 syntax on
 "colorscheme badwolf
 set number
