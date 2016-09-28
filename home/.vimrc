@@ -22,6 +22,7 @@ syntax on
 set number
 if has("autocmd")
 	filetype plugin indent on
+    autocmd FileType json setlocal shiftwidth=2 tabstop=2 
 endif
 set showcmd             " Show (partial) command in status line.
 set showmatch           " Show matching brackets.
