@@ -47,3 +47,6 @@ bindkey '^[[B' down-line-or-search
 
 export NVM_DIR="/home/matt/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# this is the prompt from the mh.omz-theme theme with the $HOST added
+export PROMPT="[%{$fg[$NCOLOR]%}%B%n%b%{$reset_color%}@$HOST:%{$fg[red]%}%30<...<%~%<<%{$reset_color%}]%($)"
