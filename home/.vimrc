@@ -80,7 +80,7 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
 
 " quick buffer switching 
-Plug 'vim-scripts/QuickBuf'
+" Plug 'vim-scripts/QuickBuf'
 
 " indent guides <leader> i g
 Plug 'nathanaelkane/vim-indent-guides'
@@ -91,3 +91,4 @@ Plug 'vim-scripts/L9' | Plug 'vim-scripts/FuzzyFinder'
 call plug#end()
 colorscheme Tomorrow-Night
 highlight LineNr guifg=#AAAAAA
+let g:neocomplete#enable_at_startup = 1
