@@ -62,7 +62,32 @@ map <Leader>ft :FufTag<cr>
 map <Leader>ftc :FufTagWithCursorWord<cr>
 map <Leader>t :TagbarToggle<cr>
 imap <C-Space> <C-x><C-o>
-call pathogen#infect()
-call pathogen#helptags()
+call plug#begin('~/.vim/plugged')
+
+" autocomplete as you type
+Plug 'Shougo/neocomplete'
+
+" git integration
+Plug 'tpope/vim-fugitive'
+
+" vim go tools
+Plug 'fatih/vim-go'
+
+" navigation side bar - toggle with <leader>-n
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+
+" comment tools <leader>c c
+Plug 'scrooloose/nerdcommenter'
+
+" quick buffer switching 
+Plug 'vim-scripts/QuickBuf'
+
+" indent guides <leader> i g
+Plug 'nathanaelkane/vim-indent-guides'
+
+" <leader> f f  fuzzy finder
+Plug 'vim-scripts/L9' | Plug 'vim-scripts/FuzzyFinder'
+
+call plug#end()
 colorscheme Tomorrow-Night
 highlight LineNr guifg=#AAAAAA
