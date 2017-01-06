@@ -38,6 +38,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 alias la='ls -la'
+alias clip='xclip -sel clip'
 
 if [[ -f ~/.zshrclocal ]]; then
     source ~/.zshrclocal
