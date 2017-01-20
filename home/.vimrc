@@ -22,8 +22,10 @@ syntax on
 set number
 if has("autocmd")
 	filetype plugin indent on
-    autocmd FileType json setlocal shiftwidth=2 tabstop=2 
+    autocmd FileType json setlocal shiftwidth=2 tabstop=2 softtabstop=2
 endif
+au BufNewFile,BufReadPost *.template setl shiftwidth=2 expandtab tabstop=2 softtabstop=2
+
 set showcmd             " Show (partial) command in status line.
 set showmatch           " Show matching brackets.
 set ignorecase          " Do case insensitive matching
@@ -79,14 +81,14 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " comment tools <leader>c c
 Plug 'scrooloose/nerdcommenter'
 
-" quick buffer switching 
-" Plug 'vim-scripts/QuickBuf'
-
 " indent guides <leader> i g
 Plug 'nathanaelkane/vim-indent-guides'
 
 " <leader> f f  fuzzy finder
 Plug 'vim-scripts/L9' | Plug 'vim-scripts/FuzzyFinder'
+
+" quick buffer switching 
+Plug 'QuickBuf'
 
 call plug#end()
 colorscheme Tomorrow-Night
