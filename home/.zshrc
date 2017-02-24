@@ -32,7 +32,7 @@ export TERM=xterm-256color
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git bower coffee debian golang node npm nvm tmux vi-mode grunt history wd aws kubectl)
+plugins=(git bower coffee debian golang node npm nvm tmux vi-mode grunt history wd aws kubectl memo)
 
 source $ZSH/oh-my-zsh.sh
 
