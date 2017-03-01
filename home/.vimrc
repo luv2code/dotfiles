@@ -63,6 +63,10 @@ map <Leader>fl :FufLine<cr>
 map <Leader>ft :FufTag<cr>
 map <Leader>ftc :FufTagWithCursorWord<cr>
 map <Leader>t :TagbarToggle<cr>
+map <Leader>p "+p
+map <Leader>y "+y
+map <Leader>P "*p
+map <Leader>Y "*y
 imap <C-Space> <C-x><C-o>
 call plug#begin('~/.vim/plugged')
 
