@@ -39,6 +39,7 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 alias la='ls -la'
 alias clip='xclip -sel clip'
+alias grab='wget -nd -r -l 1 -P . -A jpeg,jpg,bmp,gif,png'
 
 if [[ -f ~/.zshrclocal ]]; then
     source ~/.zshrclocal
