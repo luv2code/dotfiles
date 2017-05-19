@@ -29,6 +29,7 @@ set number
 if has("autocmd")
 	filetype plugin indent on
     autocmd FileType json setlocal shiftwidth=2 tabstop=2 softtabstop=2
+    autocmd FileType yaml setlocal shiftwidth=2 tabstop=2 softtabstop=2
 endif
 au BufNewFile,BufReadPost *.template setl shiftwidth=2 expandtab tabstop=2 softtabstop=2
 
