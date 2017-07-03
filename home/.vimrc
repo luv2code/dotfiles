@@ -99,7 +99,7 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'vim-scripts/L9' | Plug 'vim-scripts/FuzzyFinder'
 
 " quick buffer switching 
-Plug 'QuickBuf'
+Plug 'vim-scripts/QuickBuf'
 
 call plug#end()
 colorscheme Tomorrow-Night
