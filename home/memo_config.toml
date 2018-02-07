@@ -1,11 +1,11 @@
 #memodir = "/home/matt/.config/memo/_posts"
-memodir = "/home/matt/Dropbox/Docs/Notes"
+memodir = "$HOME/Dropbox/Docs/Notes"
 editor = "vim"
 column = 20
 selectcmd = "peco"
 #grepcmd = "grep -nH ${PATTERN} ${FILES}"
 grepcmd = "sift -i -A 5 -B 5 ${PATTERN} ${FILES} || true"
 assetsdir = "."
-pluginsdir = "/home/matt/.config/memo/plugins"
+pluginsdir = "$HOME/.config/memo/plugins"
 templatedirfile = ""
 templatebodyfile = ""

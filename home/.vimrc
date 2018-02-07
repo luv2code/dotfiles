@@ -74,6 +74,11 @@ map <Leader>p "+p
 map <Leader>y "+y
 map <Leader>P "*p
 map <Leader>Y "*y
+
+" Mini tabs, small "m":
+map \m <Esc>:set expandtab tabstop=2 shiftwidth=2<CR>
+map \M <Esc>:set expandtab tabstop=4 shiftwidth=4<CR>
+
 imap <C-Space> <C-x><C-o>
 call plug#begin('~/.vim/plugged')
 
