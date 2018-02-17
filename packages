@@ -15,3 +15,5 @@ throttle - network throttle browsers and such
 xclip
 libssl-dev
 keepass2
+snap keepassxc
+qterminal
