@@ -7,11 +7,13 @@ sudo apt-get install \
     build-essential \
     curl \
     xclip \
-    keepass2 \
     cinnamon \
     easystroke \
     xbindkeys \
+    autokey-gtk \
     python-pip
+
+sudo snap install keepassxc
 
 sudo -H pip install pip --upgrade
 
@@ -19,7 +21,7 @@ sudo -H pip install glances awscli
 
 mv /home/matt/.bashrc /home/matt/.bashrc.orig
 mv /home/matt/.zshrc /home/matt/.zshrc.orig
-ln -s /home/matt/.dotfiles/home/.zshrc /home/matt/.
+ln -s /home/matt/.dotfiles/home/.zshrc /home/matt/.zshrc
 ln -s /home/matt/.dotfiles/home/.bashrc /home/matt/.bashrc
 ln -s /home/matt/.dotfiles/home/.gitconfig /home/matt/.gitconfig
 ln -s /home/matt/.dotfiles/home/.speedswapper /home/matt/.speedswapper
