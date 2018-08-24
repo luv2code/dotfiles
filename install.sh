@@ -1,6 +1,7 @@
 sudo apt-get install \
     vim-nox \
     vim-gtk \
+    redshift-gtk \
     git \
     tmux \
     zsh \
