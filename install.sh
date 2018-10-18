@@ -45,3 +45,5 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 curl -fLo ~/.vim/colors/Tomorrow-Night.vim --create-dirs \
     https://raw.githubusercontent.com/chriskempson/tomorrow-theme/master/vim/colors/Tomorrow-Night.vim   
+
+echo "Use nativefier to install a gmail application: npm i -g nativefier; nativefier 'https://mail.google.com/mail/u/0/#inbox'" 
