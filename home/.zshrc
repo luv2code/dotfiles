@@ -36,6 +36,7 @@ plugins=(git debian vi-mode grunt history wd kubectl memo kops)
 #plugins=(git debian golang node npm nvm tmux vi-mode grunt history wd aws kubectl memo kops)
 
 source $ZSH/oh-my-zsh.sh
+apt_pref='apt'
 
 # Customize to your needs...
 alias la='ls -la'
