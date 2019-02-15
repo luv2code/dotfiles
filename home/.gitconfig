@@ -1,21 +1,15 @@
-[gui]
 [user]
 	email = luv2code@gmail.com
 	name = Matthew Taylor
 [alias]
     gui = !sh -c '/usr/local/git/libexec/git-core/git-gui'
 	sb = status -sb
-	tf = tfs fetch
-	ct = tfs checkintool
 	hard = reset --hard
 	a = add .
     co = checkout
 	coma = commit -a -m
 	com = commit -m
     today = log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative
-    ci = tf checkin
-    cia = tf checkin --associate
-    tp = tf pull --rebase --deep
 	up = "!git remote update -p; git merge --ff-only @{u}"
 	graph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --all
 	l50 = "!git log --abbrev-commit --date=short --pretty=format:'%x00%h%x00%cd%x00%s%x00%an%x00%d' | gawk -F '\\0' '{ printf \"%s\\033[31m%s\\033[0m \\033[32m%s\\033[0m  %-50s \\033[30;1m%s\\033[0m\\033[33m%s\\n\", $1, $2, $3, gensub(/(.{49}).{2,}/, \"\\\\1����\",\"g\",$4), $5, $6 }' | less -R"
@@ -34,13 +28,9 @@
     trustExitCode = false
     keepBackup = false
     prompt = false
-[mergetool "mymeld"]
-	cmd = meld $LOCAL $BASE $REMOTE $MERGED 
 [push]
     #default = simple
 [push]
 	default = simple
 [mergetool]
 	keepBackup = false
-[gui]
-	recentrepo = /Users/mtaylor/projects/gitlab/piranha/portamello
