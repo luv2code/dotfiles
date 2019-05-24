@@ -22,7 +22,7 @@ set bs=2
 set background=dark
 set wrapmargin=8
 set ruler
-set guifont=Consolas\ 10 
+set guifont=Consolas\ 14 
 syntax on
 "colorscheme badwolf
 set number
@@ -105,6 +105,9 @@ Plug 'vim-scripts/L9' | Plug 'vim-scripts/FuzzyFinder'
 
 " quick buffer switching 
 Plug 'vim-scripts/QuickBuf'
+
+" common editor settings .editorconfig support
+Plug 'editorconfig/editorconfig-vim'
 
 call plug#end()
 colorscheme Tomorrow-Night
