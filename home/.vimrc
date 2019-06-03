@@ -109,6 +109,9 @@ Plug 'vim-scripts/QuickBuf'
 " common editor settings .editorconfig support
 Plug 'editorconfig/editorconfig-vim'
 
+" typescript syntax settings
+Plug 'HerringtonDarkholme/yats.vim'
+
 call plug#end()
 colorscheme Tomorrow-Night
 highlight LineNr guifg=#AAAAAA
