@@ -17,3 +17,4 @@ libssl-dev
 keepass2
 snap keepassxc
 qterminal
+fswatch

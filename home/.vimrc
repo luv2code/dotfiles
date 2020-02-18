@@ -22,7 +22,7 @@ set bs=2
 set background=dark
 set wrapmargin=8
 set ruler
-set guifont=Consolas\ 14 
+set guifont=JetBrains\ Mono\ 8 
 syntax on
 "colorscheme badwolf
 set number
