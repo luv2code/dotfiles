@@ -112,3 +112,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
+export http_proxy=''
+export https_proxy=''
+export ftp_proxy=''
+export socks_proxy=''

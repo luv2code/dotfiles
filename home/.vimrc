@@ -1,7 +1,8 @@
 set nocompatible
 set encoding=utf-8
 set backupdir=./.backup,/tmp,/home/matt/.backup
-set directory=.,/home/matt/.backup,./.backup,/tmp
+"set directory=.,/home/matt/.backup,./.backup,/tmp
+set directory=/home/matt/.backup,./.backup,/tmp
 let mapleader = "\<Space>"
 if &term =~ '256color'
   " disable Background Color Erase (BCE) so that color schemes
@@ -12,11 +13,11 @@ endif
 " inoremap jj <Esc>
 " nnoremap JJJJ <Nop>
 " let NERDTreeDirArrows=0
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set smarttab
 set expandtab
-set softtabstop=4
+set softtabstop=2
 set autoindent
 set bs=2
 set background=dark

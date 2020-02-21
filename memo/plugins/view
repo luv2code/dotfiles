@@ -1,0 +1,16 @@
+#! /usr/bin/env bash
+
+arg=$1
+note=""
+
+echo "note $arg"
+
+if [ -z $arg ]; then
+  note=$(ls $MEMODIR | peco)
+else
+  note=$arg
+fi
+note="$MEMODIR/$note"
+echo "viewing $note"
+echo ""
+cat $note | marked | elinks --dump | less
