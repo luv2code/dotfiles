@@ -40,19 +40,18 @@ apt_pref='apt'
 
 # Customize to your needs...
 alias la='ls -la'
-alias clip='xclip -sel clip'
 alias grab='wget -nd -r -l 1 -P . -A jpeg,jpg,bmp,gif,png'
+
+if hash xclip 2>/dev/null; then
+    alias clip=xclip -sel clip
+    alias clippaste=xclip -sel clip -o
+fi
 
 if [[ -f ~/.zshrclocal ]]; then
     source ~/.zshrclocal
 fi
 bindkey '^[[A' up-line-or-search
 bindkey '^[[B' down-line-or-search
-
-# moved to zshrclocal because MAC
-#export NVM_DIR="/home/matt/.nvm"
-#[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # this is the prompt from the mh.omz-theme theme with the $HOST added
 export PROMPT="[%{$fg[$NCOLOR]%}%B%n%b%{$reset_color%}@$HOST:%{$fg[red]%}%30<...<%~%<<%{$reset_color%}]%($)"
