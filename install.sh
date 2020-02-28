@@ -40,8 +40,6 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -
 sudo dpkg -i ~/Downloads/chrome.deb
 sudo apt-get install -f
 
-xdg-open https://www.dropbox.com/install
-
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 curl -fLo ~/.vim/colors/Tomorrow-Night.vim --create-dirs \
