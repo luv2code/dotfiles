@@ -1,5 +1,5 @@
 #memodir = "/home/matt/.config/memo/_posts"
-memodir = "$HOME/Dropbox/Docs/Notes"
+memodir = "$HOME/Insync/gdrive/Notes"
 editor = "vim"
 column = 20
 selectcmd = "peco"
