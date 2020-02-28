@@ -42,8 +42,8 @@ alias la='ls -la'
 alias grab='wget -nd -r -l 1 -P . -A jpeg,jpg,bmp,gif,png'
 
 if hash xclip 2>/dev/null; then
-    alias clip=xclip -sel clip
-    alias clippaste=xclip -sel clip -o
+    alias clip='xclip -sel clip'
+    alias clippaste='xclip -sel clip -o'
 fi
 
 if [[ -f ~/.zshrclocal ]]; then
