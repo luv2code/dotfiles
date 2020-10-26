@@ -52,5 +52,11 @@ fi
 bindkey '^[[A' up-line-or-search
 bindkey '^[[B' down-line-or-search
 
+function setgov ()
+{
+    # for setting cpu governor like $> setgov powersave
+    echo "$1" | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor 
+}
+
 # this is the prompt from the mh.omz-theme theme with the $HOST added
 export PROMPT="[%{$fg[$NCOLOR]%}%B%n%b%{$reset_color%}@$HOST:%{$fg[red]%}%30<...<%~%<<%{$reset_color%}]%($)"
