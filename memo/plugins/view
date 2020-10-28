@@ -16,13 +16,11 @@ if [ $note == "-usage" ]; then
   echo "[name of memo]         view the specified memo"
   echo ""
   echo "depends on the following cli tools in path:"
-  echo "    https://github.com/peco/peco"
-  echo "    http://elinks.or.cz"
-  echo "    https://marked.js.org"
+  echo "    https://github.com/charmbracelet/glow (go get -u github.com/charmbracelet/glow)"
   exit 0
 fi
 
 note="$MEMODIR/$note"
 echo "viewing $note"
 echo ""
-cat $note | marked | elinks --dump | less
+glow -lp $note
