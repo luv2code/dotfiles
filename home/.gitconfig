@@ -34,3 +34,5 @@
 	default = simple
 [mergetool]
 	keepBackup = false
+[rerere]
+	enabled = true

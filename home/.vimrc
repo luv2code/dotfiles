@@ -13,6 +13,9 @@ endif
 " inoremap jj <Esc>
 " nnoremap JJJJ <Nop>
 " let NERDTreeDirArrows=0
+if has("gui_running")
+  autocmd GUIEnter * set vb t_vb=
+endif
 set tabstop=2
 set shiftwidth=2
 set smarttab
