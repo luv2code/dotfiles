@@ -32,7 +32,7 @@ export TERM=xterm-256color
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git debian vi-mode history wd memo)
+plugins=(git debian vi-mode history wd memo deno)
 
 source $ZSH/oh-my-zsh.sh
 apt_pref='apt'
