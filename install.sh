@@ -14,7 +14,7 @@ sudo apt-get install \
     autokey-gtk \
     python-pip
 
-sudo snap install keepassxc
+sudo snap install keepassxc vlc steam firefox
 
 sudo -H pip install pip --upgrade
 

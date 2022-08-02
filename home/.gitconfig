@@ -36,3 +36,5 @@
 	keepBackup = false
 [rerere]
 	enabled = true
+[init]
+	defaultBranch = main

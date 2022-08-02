@@ -35,11 +35,12 @@ export TERM=xterm-256color
 plugins=(git debian vi-mode history wd memo deno)
 
 source $ZSH/oh-my-zsh.sh
-apt_pref='apt'
+apt_pref='aptitude'
 
 # Customize to your needs...
 alias la='ls -la'
 alias grab='wget -nd -r -l 1 -P . -A jpeg,jpg,bmp,gif,png'
+alias adu="sudo $apt_pref update && sudo $apt_pref full-upgrade" 
 
 if hash xclip 2>/dev/null; then
     alias clip='xclip -sel clip'
@@ -60,3 +61,7 @@ function setgov ()
 
 # this is the prompt from the mh.omz-theme theme with the $HOST added
 export PROMPT="[%{$fg[$NCOLOR]%}%B%n%b%{$reset_color%}@$HOST:%{$fg[red]%}%30<...<%~%<<%{$reset_color%}]%($)"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
