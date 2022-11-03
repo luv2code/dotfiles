@@ -86,8 +86,8 @@ map \M <Esc>:set expandtab tabstop=4 shiftwidth=4<CR>
 imap <C-Space> <C-x><C-o>
 call plug#begin('~/.vim/plugged')
 
-" autocomplete as you type
-Plug 'Shougo/neocomplete'
+" YCM autocompletion 
+Plug 'ycm-core/YouCompleteMe'
 
 " git integration
 Plug 'tpope/vim-fugitive'
@@ -108,7 +108,7 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'vim-scripts/L9' | Plug 'vim-scripts/FuzzyFinder'
 
 " quick buffer switching 
-Plug 'vim-scripts/QuickBuf'
+" Plug 'vim-scripts/QuickBuf'
 
 " common editor settings .editorconfig support
 Plug 'editorconfig/editorconfig-vim'
