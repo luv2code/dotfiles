@@ -37,10 +37,21 @@ plugins=(git debian vi-mode history wd memo deno)
 source $ZSH/oh-my-zsh.sh
 apt_pref='aptitude'
 
+export EDITOR=/usr/bin/nvim
+export VISUAL=/usr/bin/nvim
+
 # Customize to your needs...
 alias la='ls -la'
 alias grab='wget -nd -r -l 1 -P . -A jpeg,jpg,bmp,gif,png'
 alias adu="sudo $apt_pref update && sudo $apt_pref full-upgrade" 
+alias v="$EDITOR"
+
+# File handling Suffixes
+alias -s md=glow
+alias -s js=node
+alias -s go='go run'  
+alias -s {mkv,avi,ogg,svg,jpg,png,bmp,gif,mp4,wma,mp3,mpeg}=xdg-open
+alias -s {pdf,epub,rtx,html,htm}=xdg-open
 
 if hash xclip 2>/dev/null; then
     alias clip='xclip -sel clip'
@@ -56,7 +67,12 @@ bindkey '^[[B' down-line-or-search
 function setgov ()
 {
     # for setting cpu governor like $> setgov powersave
-    echo "$1" | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor 
+    if [[ "$1" = "performance" ]] || [[ "$1" = "powersave" ]]; then
+      echo "$1" | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor 
+    else
+      echo "Wrong parameter. performance|powersave required"
+      return 1
+    fi
 }
 
 # this is the prompt from the mh.omz-theme theme with the $HOST added

@@ -38,3 +38,8 @@
 	enabled = true
 [init]
 	defaultBranch = main
+; include for all repositories inside financeware directory
+[includeIf "gitdir:~/projects/github.com/financeware/"]
+  path = /home/matt/projects/github.com/financeware/.gitconfig
+
+
