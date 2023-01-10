@@ -27,7 +27,6 @@ ln -s /home/matt/.dotfiles/home/.bashrc /home/matt/.bashrc
 ln -s /home/matt/.dotfiles/home/.gitconfig /home/matt/.gitconfig
 ln -s /home/matt/.dotfiles/home/.speedswapper /home/matt/.speedswapper
 ln -s /home/matt/.dotfiles/home/.tmux.conf /home/matt/.tmux.conf
-ln -s /home/matt/.dotfiles/home/.sift.conf /home/matt/.sift.conf
 ln -s /home/matt/.dotfiles/home/.vimrc /home/matt/.vimrc
 ln -s /home/matt/.dotfiles/home/.xbindkeysrc /home/matt/.xbindkeysrc
 
@@ -46,3 +45,4 @@ curl -fLo ~/.vim/colors/Tomorrow-Night.vim --create-dirs \
     https://raw.githubusercontent.com/chriskempson/tomorrow-theme/master/vim/colors/Tomorrow-Night.vim   
 
 echo "Use nativefier to install a gmail application: npm i -g nativefier; nativefier 'https://mail.google.com/mail/u/0/#inbox'" 
+echo "install rustup and after, install crates: 'ripgrep'"
