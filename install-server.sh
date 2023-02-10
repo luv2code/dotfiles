@@ -18,7 +18,6 @@ ln -s /home/matt/.dotfiles/home/.bashrc /home/matt/.bashrc
 ln -s /home/matt/.dotfiles/home/.gitconfig /home/matt/.gitconfig
 ln -s /home/matt/.dotfiles/home/.speedswapper /home/matt/.speedswapper
 ln -s /home/matt/.dotfiles/home/.tmux.conf /home/matt/.tmux.conf
-ln -s /home/matt/.dotfiles/home/.sift.conf /home/matt/.sift.conf
 ln -s /home/matt/.dotfiles/home/.vimrc /home/matt/.vimrc
 ln -s /home/matt/.dotfiles/home/.xbindkeysrc /home/matt/.xbindkeysrc
 
