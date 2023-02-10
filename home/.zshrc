@@ -32,7 +32,7 @@ export TERM=xterm-256color
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git debian vi-mode history wd memo deno)
+plugins=(git debian vi-mode history wd memo deno rust ripgrep)
 
 source $ZSH/oh-my-zsh.sh
 apt_pref='aptitude'
@@ -45,6 +45,7 @@ alias la='ls -la'
 alias grab='wget -nd -r -l 1 -P . -A jpeg,jpg,bmp,gif,png'
 alias adu="sudo $apt_pref update && sudo $apt_pref full-upgrade" 
 alias v="$EDITOR"
+alias rgs="rg -S"
 
 # File handling Suffixes
 alias -s md=glow
