@@ -8,7 +8,7 @@ ZSH=$HOME/.oh-my-zsh
 #ZSH_THEME="robbyrussell"
 ZSH_THEME="mh"
 
-export TERM=xterm-256color
+#export TERM=screen-256color
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -73,6 +73,10 @@ function setgov ()
     else
       echo "Wrong parameter. performance|powersave required"
       return 1
+    fi
+    # turn off audio power save to keep speakers from buzzing
+    if [[ "$1" = "performance" ]]; then
+      echo "0" | sudo tee /sys/module/snd_hda_intel/parameters/power_save
     fi
 }
 
