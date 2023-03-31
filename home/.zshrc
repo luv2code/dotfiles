@@ -80,6 +80,10 @@ function setgov ()
     fi
 }
 
+function wttr () {
+  curl -s ""wttr.in/$LOCAL_CITY?format=3""
+}
+
 # this is the prompt from the mh.omz-theme theme with the $HOST added
 export PROMPT="[%{$fg[$NCOLOR]%}%B%n%b%{$reset_color%}@$HOST:%{$fg[red]%}%30<...<%~%<<%{$reset_color%}]%($)"
 
