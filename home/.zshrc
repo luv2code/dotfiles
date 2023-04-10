@@ -34,6 +34,9 @@ ZSH_THEME="mh"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git debian vi-mode history wd memo deno rust ripgrep)
 
+# opt out of dotnet telemetry
+DOTNET_CLI_TELEMETRY_OPTOUT=true
+
 source $ZSH/oh-my-zsh.sh
 apt_pref='aptitude'
 
@@ -50,9 +53,14 @@ alias rgs="rg -S"
 # File handling Suffixes
 alias -s md=glow
 alias -s js=node
+alias -s json='jq .'  
 alias -s go='go run'  
 alias -s {mkv,avi,ogg,svg,jpg,png,bmp,gif,mp4,wma,mp3,mpeg}=xdg-open
 alias -s {pdf,epub,rtx,html,htm}=xdg-open
+
+if [ "$TERM_PROGRAM" = "WezTerm" ]; then
+  alias -s {svg,jpg,png,bmp,gif}='wezterm imgcat'  
+fi
 
 if hash xclip 2>/dev/null; then
     alias clip='xclip -sel clip'
@@ -81,7 +89,8 @@ function setgov ()
 }
 
 function wttr () {
-  curl -s ""wttr.in/$LOCAL_CITY?format=3""
+  #curl -s ""wttr.in/$LOCAL_CITY?format=3""
+  curl -s ""v2.wttr.in/$LOCAL_CITY""
 }
 
 # this is the prompt from the mh.omz-theme theme with the $HOST added
