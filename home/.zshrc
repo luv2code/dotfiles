@@ -49,6 +49,7 @@ alias grab='wget -nd -r -l 1 -P . -A jpeg,jpg,bmp,gif,png'
 alias adu="sudo $apt_pref update && sudo $apt_pref full-upgrade" 
 alias v="$EDITOR"
 alias rgs="rg -S"
+alias ts="tailscale"
 
 # File handling Suffixes
 alias -s md=glow
@@ -89,6 +90,11 @@ function setgov ()
 }
 
 function wttr () {
+  #curl -s ""wttr.in/$LOCAL_CITY?format=3""
+  curl -s ""wttr.in/$LOCAL_CITY""
+}
+
+function wttr2 () {
   #curl -s ""wttr.in/$LOCAL_CITY?format=3""
   curl -s ""v2.wttr.in/$LOCAL_CITY""
 }
