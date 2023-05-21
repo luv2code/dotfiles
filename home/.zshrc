@@ -50,6 +50,7 @@ alias adu="sudo $apt_pref update && sudo $apt_pref full-upgrade"
 alias v="$EDITOR"
 alias rgs="rg -S"
 alias ts="tailscale"
+alias ip="ip --color"
 
 # File handling Suffixes
 alias -s md=glow
