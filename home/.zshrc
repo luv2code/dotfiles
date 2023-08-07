@@ -49,7 +49,7 @@ alias grab='wget -nd -r -l 1 -P . -A jpeg,jpg,bmp,gif,png'
 alias adu="sudo $apt_pref update && sudo $apt_pref full-upgrade" 
 alias v="$EDITOR"
 alias rgs="rg -S"
-alias ts="tailscale"
+alias ts="sudo tailscale"
 alias ip="ip --color"
 
 # File handling Suffixes
@@ -100,5 +100,12 @@ function wttr2 () {
   curl -s ""v2.wttr.in/$LOCAL_CITY""
 }
 
+function cbfilter() {
+  if [ $# -gt 0 ]; then
+      clippaste | "$@" | clipcopy
+  else
+      clippaste | clipcopy
+  fi
+} 
 # this is the prompt from the mh.omz-theme theme with the $HOST added
 export PROMPT="[%{$fg[$NCOLOR]%}%B%n%b%{$reset_color%}@$HOST:%{$fg[red]%}%30<...<%~%<<%{$reset_color%}]%($)"
