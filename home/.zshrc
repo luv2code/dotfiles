@@ -109,3 +109,9 @@ function cbfilter() {
 } 
 # this is the prompt from the mh.omz-theme theme with the $HOST added
 export PROMPT="[%{$fg[$NCOLOR]%}%B%n%b%{$reset_color%}@$HOST:%{$fg[red]%}%30<...<%~%<<%{$reset_color%}]%($)"
+
+# bun completions
+[ -s "/home/matt/.bun/_bun" ] && source "/home/matt/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
