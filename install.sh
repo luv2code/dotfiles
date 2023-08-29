@@ -30,6 +30,8 @@ ln -s /home/matt/.dotfiles/home/.tmux.conf /home/matt/.tmux.conf
 ln -s /home/matt/.dotfiles/home/.vimrc /home/matt/.vimrc
 ln -s /home/matt/.dotfiles/home/.xbindkeysrc /home/matt/.xbindkeysrc
 ln -s /home/matt/.dotfiles/home/.wezterm.lua /home/matt/.wezterm.lua
+ln -s /home/matt/.dotfiles/home/.emacs /home/matt/.emacs
+ln -s /home/matt/.dotfiles/home/.sbclrc /home/matt/.sbclrc
 
 gsettings set org.gnome.desktop.background show-desktop-icons false
 gsettings set org.nemo.desktop show-desktop-icons true

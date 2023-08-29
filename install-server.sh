@@ -20,6 +20,8 @@ ln -s /home/matt/.dotfiles/home/.speedswapper /home/matt/.speedswapper
 ln -s /home/matt/.dotfiles/home/.tmux.conf /home/matt/.tmux.conf
 ln -s /home/matt/.dotfiles/home/.vimrc /home/matt/.vimrc
 ln -s /home/matt/.dotfiles/home/.xbindkeysrc /home/matt/.xbindkeysrc
+ln -s /home/matt/.dotfiles/home/.emacs /home/matt/.emacs
+ln -s /home/matt/.dotfiles/home/.sbclrc /home/matt/.sbclrc
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
