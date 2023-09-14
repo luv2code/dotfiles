@@ -32,7 +32,7 @@ ZSH_THEME="mh"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git debian vi-mode history wd deno rust ripgrep)
+plugins=(git debian vi-mode history wd deno rust ripgrep bun)
 
 # opt out of dotnet telemetry
 DOTNET_CLI_TELEMETRY_OPTOUT=true
@@ -107,6 +107,14 @@ function cbfilter() {
       clippaste | clipcopy
   fi
 } 
+
+function watch() {
+  if [[ "$1" = "" ]] || [[ "$2" = "" ]]; then
+    echo "usage: watch [fileglob] [command]"
+  else
+    while inotifywait -e close_write $1 || true; do clear; eval $2; done
+  fi
+}
 # this is the prompt from the mh.omz-theme theme with the $HOST added
 export PROMPT="[%{$fg[$NCOLOR]%}%B%n%b%{$reset_color%}@$HOST:%{$fg[red]%}%30<...<%~%<<%{$reset_color%}]%($)"
 
