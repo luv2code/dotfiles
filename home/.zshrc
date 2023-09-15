@@ -108,7 +108,7 @@ function cbfilter() {
   fi
 } 
 
-function watch() {
+function fwatch() {
   if [[ "$1" = "" ]] || [[ "$2" = "" ]]; then
     echo "usage: watch [fileglob] [command]"
   else
