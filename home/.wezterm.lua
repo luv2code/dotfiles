@@ -16,7 +16,7 @@ end
 -- For example, changing the color scheme:
 config.color_scheme = 'Tomorrow Night Bright (Gogh)'
 config.window_background_opacity = 0.85
-config.font_size = 15
+config.font_size = 16
 config.scrollback_lines = 20000
 
 config.hide_tab_bar_if_only_one_tab = true

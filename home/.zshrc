@@ -108,6 +108,18 @@ function cbfilter() {
   fi
 } 
 
+function watch-color() {
+  if [[ "$1" = "" ]] || [[ "$2" = "" ]]; then
+    echo "usage: watch [sleep seconds] [command]"
+  else
+    while true; do
+			clear	
+			eval $2
+			sleep $1
+		done
+  fi
+}
+
 function fwatch() {
   if [[ "$1" = "" ]] || [[ "$2" = "" ]]; then
     echo "usage: watch [fileglob] [command]"
