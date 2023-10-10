@@ -50,3 +50,7 @@
 ; include special config for all repositories inside gitignite directory
 [includeIf "gitdir:~/projects/gitlab/gitignite/"]
   path = /home/matt/projects/gitlab/gitignite/.gitconfig
+
+; include special config for all repositories inside simpletonpattern directory
+[includeIf "gitdir:~/projects/github.com/simpletonpattern/"]
+  path = /home/matt/projects/github.com/simpletonpattern/.gitconfig
