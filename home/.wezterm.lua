@@ -83,6 +83,11 @@ config.keys = {
     mods = 'LEADER',
     action = act.ActivatePaneDirection 'Down',
   },
+  {
+    key = ';',
+    mods = 'LEADER',
+    action = act.ActivateLastTab,
+  },
   -- Send "CTRL-A" to the terminal when pressing CTRL-A, CTRL-A
   {
     key = 'a',
