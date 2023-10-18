@@ -108,9 +108,9 @@ function cbfilter() {
   fi
 } 
 
-function watch-color() {
+function while-color() {
   if [[ "$1" = "" ]] || [[ "$2" = "" ]]; then
-    echo "usage: watch [sleep seconds] [command]"
+    echo "usage: while-color [sleep seconds] [command]"
   else
     while true; do
 			clear	
@@ -118,6 +118,23 @@ function watch-color() {
 			sleep $1
 		done
   fi
+}
+
+function kill-server() {
+  local port="$1"
+  if [[ "$1" = "" ]]; then
+		local port="8080"
+  fi
+	local pid=$(lsof -ti ":$port")
+	if [[ "$pid" = "" ]]; then
+		echo "no process listening on :$port"
+		return
+	fi
+	kill -9 $pid
+	if [[ "$?" != "0" ]]; then
+    echo "usage: kill-server port"
+    echo "if a port was supplied and you are seeing this. there isn't a service running on that port."
+	fi
 }
 
 function fwatch() {
