@@ -48,11 +48,6 @@ config.keys = {
     mods = 'LEADER',
     action = act.ActivateCommandPalette,
   },
-  {
-    key = 'p',
-    mods = 'LEADER',
-    action = act.ActivateCommandPalette,
-  },
   -- activate pane selection mode with the default alphabet (labels are "a", "s", "d", "f" and so on)
   { key = '8', mods = 'LEADER', action = act.PaneSelect },
   -- activate pane selection mode with numeric labels
