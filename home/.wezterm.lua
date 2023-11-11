@@ -117,12 +117,10 @@ config.keys = {
 }
 
 -- maximize on startup
-local mux = wezterm.mux
-
-wezterm.on("gui-startup", function(cmd)
-  local tab, pane, window = mux.spawn_window(cmd or {})
-  window:gui_window():maximize()
-end)
+--wezterm.on("gui-startup", function(cmd)
+  --local tab, pane, window = wezterm.mux.spawn_window(cmd or {})
+  --window:gui_window():maximize()
+--end)
 
 wezterm.on('format-window-title', function(tab, pane, tabs, panes, config)
   local zoomed = ''
