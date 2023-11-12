@@ -108,19 +108,42 @@ config.keys = {
     mods = 'LEADER',
     action = act.ActivateTab(3),
   },
+	-- maximize window
+	{
+		key = 'F11',
+		mods = 'NONE',
+		action = wezterm.action {EmitEvent = "l2c-maximize-window"},
+	},
 	-- Turn off leader key for nested tmux sessions
 	{
 		key = 'F12',
 		mods = 'NONE',
-		action = wezterm.action {EmitEvent = "toggle-leader"},
+		action = wezterm.action {EmitEvent = "l2c-toggle-leader"},
 	},
 }
 
--- maximize on startup
---wezterm.on("gui-startup", function(cmd)
-  --local tab, pane, window = wezterm.mux.spawn_window(cmd or {})
-  --window:gui_window():maximize()
---end)
+local last_height = 0
+local last_width = 0
+wezterm.on("gui-startup", function(cmd)
+	local tab, pane, window = wezterm.mux.spawn_window(cmd or {})
+  --window:gui_window():maximize() --
+	local dims = window:gui_window():get_dimensions()
+	last_height = dims.pixel_height
+	last_width = dims.pixel_width
+end)
+
+wezterm.on('l2c-maximize-window', function (window, pane) 
+	local dims = window:get_dimensions()
+	local h = dims.pixel_height
+	local w = dims.pixel_width
+	if last_width >= w or last_height >= h then
+		window:maximize()
+	else
+		window:restore()
+	end
+	last_width = w
+	last_height = h
+end)
 
 wezterm.on('format-window-title', function(tab, pane, tabs, panes, config)
   local zoomed = ''
@@ -135,7 +158,7 @@ wezterm.on('format-window-title', function(tab, pane, tabs, panes, config)
 	return zoomed .. index .. tab.active_pane.title .. ' wezterm'
 end)
 
-wezterm.on("toggle-leader", function(window, pane)
+wezterm.on("l2c-toggle-leader", function(window, pane)
   local overrides = window:get_config_overrides() or {}
   if not overrides.leader then
     -- replace it with an "impossible" leader that will enver be pressed
