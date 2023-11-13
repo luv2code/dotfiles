@@ -65,8 +65,10 @@
 #"rxvt"
 #  Control + b:2 + Release
 "dbus-send --session --type=method_call --dest=org.Cinnamon /org/Cinnamon org.Cinnamon.ShowExpo"
-b:10 + Release
+	b:10 + Release
 
+"xdotool key 'ctrl+F4'"
+	b:9 + Release
 ##################################
 # End of xbindkeys configuration #
 ##################################
