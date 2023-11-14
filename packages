@@ -9,7 +9,6 @@ build-essential
 curl
 ctags
 default-jdk
-easystroke - keyboard macros
 throttle - network throttle browsers and such
 xclip
 libssl-dev

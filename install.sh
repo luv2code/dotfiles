@@ -9,7 +9,6 @@ sudo apt-get install \
     curl \
     xclip \
     cinnamon \
-    easystroke \
     xbindkeys \
     autokey-gtk \
     python-pip

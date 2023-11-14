@@ -7,7 +7,6 @@ sudo apt-get install \
     build-essential \
     curl \
     xclip \
-    easystroke \
     xbindkeys \
     python-pip3
 
