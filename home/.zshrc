@@ -51,6 +51,7 @@ alias v="$EDITOR"
 alias rgs="rg -S"
 alias ts="sudo tailscale"
 alias ip="ip --color"
+alias gup="git remote update -p; git merge --ff-only @{u}"
 
 # File handling Suffixes
 alias -s md=glow
