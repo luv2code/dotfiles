@@ -23,14 +23,12 @@
 	helper = cache --timeout=3600
 [merge]
 	tool = p4merge
-  conflictstyle = diff3
+	conflictstyle = zdiff3
 [mergetool "p4merge"]
   cmd = p4merge $BASE $LOCAL $REMOTE $MERGED
   trustExitCode = false
   keepBackup = false
   prompt = false
-[push]
-  #default = simple
 [push]
 	default = simple
 [mergetool]
