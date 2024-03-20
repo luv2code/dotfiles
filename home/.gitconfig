@@ -30,7 +30,8 @@
   keepBackup = false
   prompt = false
 [push]
-	default = simple
+	default = current
+	autoSetupRemote = true
 [mergetool]
 	keepBackup = false
 [rerere]
@@ -40,6 +41,9 @@
 
 [url "git@source.schmoto.com:"]
     insteadOf = https://source.schmoto.com/
+
+[url "git@github.com:"]
+	insteadOf = "https://github.com/"
 
 ; include special config for all repositories inside financeware directory
 [includeIf "gitdir:~/projects/github.com/financeware/"]
@@ -52,3 +56,17 @@
 ; include special config for all repositories inside simpletonpattern directory
 [includeIf "gitdir:~/projects/github.com/simpletonpattern/"]
   path = /home/matt/projects/github.com/simpletonpattern/.gitconfig
+[rebase]
+	autosquash = true
+[commit]
+	verbose = true
+[help]
+	autocorrect = prompt
+[diff]
+	algorithm = histogram
+[transfer]
+	fsckobjects = true
+[fetch]
+	fsckobjects = true
+[receive]
+	fsckobjects = true
