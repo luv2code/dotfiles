@@ -1,3 +1,5 @@
+#! /usr/bin/env zsh
+
 sudo apt-get install \
     vim-nox \
     vim-gtk \
@@ -46,6 +48,13 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 curl -fLo ~/.vim/colors/Tomorrow-Night.vim --create-dirs \
     https://raw.githubusercontent.com/chriskempson/tomorrow-theme/master/vim/colors/Tomorrow-Night.vim   
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+for dir in /home/matt/.dotfiles/oh-my-zsh/plugins/*; do 
+	if [[ -d $dir ]]; then
+		dir_name=$(basename $dir)
+		ln -s "$dir" "/home/matt/.oh-my-zsh/plugins/$dir_name"
+	fi
+done
 
 echo "Use nativefier to install a gmail application: npm i -g nativefier; nativefier 'https://mail.google.com/mail/u/0/#inbox'" 
 echo "install rustup and after, install crates: 'ripgrep'"
