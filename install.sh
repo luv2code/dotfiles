@@ -52,7 +52,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 for dir in /home/matt/.dotfiles/oh-my-zsh/plugins/*; do 
 	if [[ -d $dir ]]; then
 		dir_name=$(basename $dir)
-		ln -s "$dir" "/home/matt/.oh-my-zsh/plugins/$dir_name"
+		ln -s "$dir" "/home/matt/.oh-my-zsh/custom/plugins/$dir_name"
 	fi
 done
 
