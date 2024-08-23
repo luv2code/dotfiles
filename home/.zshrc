@@ -48,6 +48,7 @@ alias la='ls -la'
 alias grab='wget -nd -r -l 1 -P . -A jpeg,jpg,bmp,gif,png'
 alias adu="sudo $apt_pref update && sudo $apt_pref full-upgrade" 
 alias v="$EDITOR"
+alias lfv="nvim -u NONE -n"
 alias rgs="rg -S"
 alias ts="sudo tailscale"
 alias tf="terraform"
