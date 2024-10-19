@@ -56,5 +56,10 @@ for dir in /home/matt/.dotfiles/oh-my-zsh/plugins/*; do
 	fi
 done
 
+tempfile=$(mktemp) \
+  && curl -o $tempfile https://raw.githubusercontent.com/wez/wezterm/main/termwiz/data/wezterm.terminfo \
+  && tic -x -o ~/.terminfo $tempfile \
+  && rm $tempfile
+
 echo "Use nativefier to install a gmail application: npm i -g nativefier; nativefier 'https://mail.google.com/mail/u/0/#inbox'" 
 echo "install rustup and after, install crates: 'ripgrep'"

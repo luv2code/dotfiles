@@ -150,6 +150,9 @@ function fwatch() {
 # this is the prompt from the mh.omz-theme theme with the $HOST added
 export PROMPT="[%{$fg[$NCOLOR]%}%B%n%b%{$reset_color%}@$HOST:%{$fg[red]%}%30<...<%~%<<%{$reset_color%}]%($)"
 
+# mods completions
+[ -s "/home/matt/go/bin/mods" ] && source <(mods completion zsh)
+
 # bun completions
 [ -s "/home/matt/.bun/_bun" ] && source "/home/matt/.bun/_bun"
 

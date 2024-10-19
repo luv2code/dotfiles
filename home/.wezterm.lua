@@ -11,6 +11,8 @@ if wezterm.config_builder then
   config = wezterm.config_builder()
 end
 
+config.term = 'wezterm'
+
 -- This is where you actually apply your config choices
 -- For example, changing the color scheme:
 config.color_scheme = 'Tomorrow Night Bright (Gogh)'
