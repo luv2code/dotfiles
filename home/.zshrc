@@ -72,6 +72,19 @@ if hash xclip 2>/dev/null; then
     alias clippaste='xclip -sel clip -o'
 fi
 
+if hash govee-control 2>/dev/null; then
+    alias gov='govee-control'
+    alias govb='govee-control brightness'
+    alias govt='govee-control temp'
+    alias govo='govee-control on'
+    alias govx='govee-control off'
+    alias govw='govee-control temp 3000'
+    alias govc='govee-control temp 6500'
+    alias govh='govee-control brightness 100'
+    alias govl='govee-control brightness 10'
+fi
+
+
 if [[ -f ~/.zshrclocal ]]; then
     source ~/.zshrclocal
 fi
