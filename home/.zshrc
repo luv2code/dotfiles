@@ -84,6 +84,9 @@ if hash govee-control 2>/dev/null; then
     alias govl='govee-control brightness 10'
 fi
 
+if hash notify-send 2>/dev/null; then
+    alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(echo "CLI->" | sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+fi
 
 if [[ -f ~/.zshrclocal ]]; then
     source ~/.zshrclocal
