@@ -43,6 +43,19 @@ apt_pref='aptitude'
 export EDITOR=/usr/bin/nvim
 export VISUAL=/usr/bin/nvim
 
+# mods completions
+[ -s "/home/matt/go/bin/mods" ] && source <(/home/matt/go/bin/mods completion zsh)
+
+# bun completions
+[ -s "/home/matt/.bun/_bun" ] && source "/home/matt/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 # Customize to your needs...
 alias la='ls -la'
 alias grab='wget -nd -r -l 1 -P . -A jpeg,jpg,bmp,gif,png'
@@ -165,16 +178,3 @@ function fwatch() {
 }
 # this is the prompt from the mh.omz-theme theme with the $HOST added
 export PROMPT="[%{$fg[$NCOLOR]%}%B%n%b%{$reset_color%}@$HOST:%{$fg[red]%}%30<...<%~%<<%{$reset_color%}]%($)"
-
-# mods completions
-[ -s "/home/matt/go/bin/mods" ] && source <(mods completion zsh)
-
-# bun completions
-[ -s "/home/matt/.bun/_bun" ] && source "/home/matt/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
