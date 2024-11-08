@@ -24,6 +24,8 @@ config.scrollback_lines = 20000
 config.hide_tab_bar_if_only_one_tab = true
 config.tab_bar_at_bottom = true
 
+config.window_decorations = "RESIZE"
+
 config.show_update_window = true
 config.check_for_updates = true
 -- timeout_milliseconds defaults to 1000 and can be omitted
