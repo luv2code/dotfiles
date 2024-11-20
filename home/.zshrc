@@ -54,6 +54,7 @@ export VISUAL=/usr/bin/nvim
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
+export PATH="/home/matt/.bun/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
