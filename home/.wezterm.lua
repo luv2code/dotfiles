@@ -13,6 +13,8 @@ end
 
 config.term = 'wezterm'
 
+config.max_fps = 120
+
 -- This is where you actually apply your config choices
 -- For example, changing the color scheme:
 config.color_scheme = 'Tomorrow Night Bright (Gogh)'

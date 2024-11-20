@@ -46,6 +46,9 @@ export VISUAL=/usr/bin/nvim
 # mods completions
 [ -s "/home/matt/go/bin/mods" ] && source <(/home/matt/go/bin/mods completion zsh)
 
+# git-delta completions
+[ -s "delta" ] && source <(delta --generate-completion zsh)
+
 # bun completions
 [ -s "/home/matt/.bun/_bun" ] && source "/home/matt/.bun/_bun"
 
