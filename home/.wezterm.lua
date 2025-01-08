@@ -22,13 +22,19 @@ config.colors = { background = "black" }
 config.window_background_opacity = 0.85
 config.font_size = 16
 config.scrollback_lines = 20000
+config.window_padding = {
+  left = 5,
+  right = 5,
+  top = 5,
+  bottom = 5,
+}
+
 
 config.hide_tab_bar_if_only_one_tab = true
 config.tab_bar_at_bottom = true
 
 config.window_decorations = "RESIZE"
 
-config.show_update_window = true
 config.check_for_updates = true
 -- timeout_milliseconds defaults to 1000 and can be omitted
 config.leader = { key = 'a', mods = 'CTRL', timeout_milliseconds = 1000 }
