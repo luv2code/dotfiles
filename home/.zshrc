@@ -40,8 +40,8 @@ DOTNET_CLI_TELEMETRY_OPTOUT=true
 source $ZSH/oh-my-zsh.sh
 apt_pref='aptitude'
 
-export EDITOR=/usr/bin/nvim
-export VISUAL=/usr/bin/nvim
+export EDITOR=nvim
+export VISUAL=nvim
 
 # mods completions
 [ -s "/home/matt/go/bin/mods" ] && source <(/home/matt/go/bin/mods completion zsh)
