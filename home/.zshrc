@@ -56,9 +56,8 @@ export VISUAL=nvim
 export BUN_INSTALL="$HOME/.bun"
 export PATH="/home/matt/.bun/bin:$PATH"
 
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# Neovim wants a TMPDIR for some reason
+export TMPDIR=/tmp
 
 # Customize to your needs...
 alias la='ls -la'

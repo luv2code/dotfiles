@@ -15,7 +15,7 @@ end
 
 config.term = 'wezterm'
 
-config.max_fps = 120
+config.max_fps = 240
 
 -- This is where you actually apply your config choices
 -- For example, changing the color scheme:
