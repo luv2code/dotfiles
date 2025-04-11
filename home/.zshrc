@@ -42,6 +42,7 @@ apt_pref='aptitude'
 
 export EDITOR=nvim
 export VISUAL=nvim
+export MANPAGER='nvim +Man!'
 
 # mods completions
 [ -s "/home/matt/go/bin/mods" ] && source <(/home/matt/go/bin/mods completion zsh)
