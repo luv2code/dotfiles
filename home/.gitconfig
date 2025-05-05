@@ -32,8 +32,6 @@
 [push]
 	default = current
 	autoSetupRemote = true
-[mergetool]
-	keepBackup = false
 [rerere]
 	enabled = true
 [init]
@@ -56,6 +54,7 @@
 ; include special config for all repositories inside simpletonpattern directory
 [includeIf "gitdir:~/projects/github.com/simpletonpattern/"]
   path = /home/matt/projects/github.com/simpletonpattern/.gitconfig
+
 [rebase]
 	autosquash = true
 [commit]
@@ -70,3 +69,8 @@
 	fsckobjects = true
 [receive]
 	fsckobjects = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
