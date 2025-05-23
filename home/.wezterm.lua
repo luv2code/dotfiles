@@ -36,7 +36,7 @@ config.underline_thickness = '2'
 config.hide_tab_bar_if_only_one_tab = true
 config.tab_bar_at_bottom = true
 
-config.window_decorations = "RESIZE"
+-- config.window_decorations = "RESIZE"
 
 config.check_for_updates = true
 -- timeout_milliseconds defaults to 1000 and can be omitted

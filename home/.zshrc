@@ -89,6 +89,11 @@ if hash xclip 2>/dev/null; then
     alias clippaste='xclip -sel clip -o'
 fi
 
+if hash wl-copy 2>/dev/null; then
+		alias clip='wl-copy'
+		alias clippaste='wl-paste'
+fi
+
 if hash govee-control 2>/dev/null; then
     alias gov='govee-control'
     alias govb='govee-control brightness'
