@@ -84,14 +84,15 @@ if [ "$TERM_PROGRAM" = "WezTerm" ]; then
   alias -s {svg,jpg,png,bmp,gif}='wezterm imgcat'  
 fi
 
-if hash xclip 2>/dev/null; then
-    alias clip='xclip -sel clip'
-    alias clippaste='xclip -sel clip -o'
-fi
 
 if hash wl-copy 2>/dev/null; then
 		alias clip='wl-copy'
 		alias clippaste='wl-paste'
+fi
+
+if hash xclip 2>/dev/null; then
+    alias clip='xclip -sel clip'
+    alias clippaste='xclip -sel clip -o'
 fi
 
 if hash govee-control 2>/dev/null; then
@@ -100,10 +101,12 @@ if hash govee-control 2>/dev/null; then
     alias govt='govee-control temp'
     alias govo='govee-control on'
     alias govx='govee-control off'
-    alias govw='govee-control temp 3000'
+    alias govw='govee-control temp 2500'
     alias govc='govee-control temp 6500'
     alias govh='govee-control brightness 100'
     alias govl='govee-control brightness 10'
+		alias govday='govh && govc'
+		alias govnight='govl && govw'
 fi
 
 if hash notify-send 2>/dev/null; then
