@@ -38,7 +38,7 @@ config.tab_bar_at_bottom = true
 
 -- config.window_decorations = "RESIZE"
 
-config.check_for_updates = true
+config.check_for_updates = false
 -- timeout_milliseconds defaults to 1000 and can be omitted
 config.leader = { key = 'a', mods = 'CTRL', timeout_milliseconds = 1000 }
 config.keys = {
