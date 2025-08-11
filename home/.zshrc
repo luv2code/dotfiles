@@ -84,8 +84,13 @@ if [ "$TERM_PROGRAM" = "WezTerm" ]; then
   alias -s {svg,jpg,png,bmp,gif}='wezterm imgcat'  
 fi
 
+if type mise &>/dev/null; then
+	eval "$(mise activate zsh)"
+else
+	echo Mise not found. Install from https://mise.jdx.dev
+fi
+
 # eza (better `ls`)
-# ------------------------------------------------------------------------------
 if type eza &>/dev/null; then
   alias l="eza --icons=always --git"
   alias ls="eza --icons=always --git"
