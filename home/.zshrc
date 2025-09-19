@@ -71,6 +71,7 @@ alias ts="sudo tailscale"
 alias tf="terraform"
 alias ip="ip --color"
 alias gup="git remote update -p; git merge --ff-only @{u}"
+alias gpnv="git push --no-verify"
 
 # File handling Suffixes
 alias -s md=glow
