@@ -32,7 +32,7 @@ ZSH_THEME="mh"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git debian vi-mode history wd deno rust bun terraform)
+plugins=(git debian vi-mode history wd deno rust bun terraform jj)
 
 # opt out of dotnet telemetry
 DOTNET_CLI_TELEMETRY_OPTOUT=true
@@ -97,8 +97,10 @@ if type eza &>/dev/null; then
   alias ls="eza --icons=always --git"
   alias ll="eza -lg --icons=always --git"
   alias llrt="eza -lg --icons=always --git --sort=newest"
+  alias llss="eza -lg --icons=always --git --sort=size"
   alias la="eza -lag --icons=always --git"
   alias lart="eza -lag --icons=always --git --sort=newest"
+  alias lass="eza -lag --icons=always --git --sort=size"
   alias lt="eza -lTg --icons=always --git"
   alias lt2="eza -lTg --level=2 --icons=always --git"
   alias lt3="eza -lTg --level=3 --icons=always --git"
@@ -214,5 +216,18 @@ function fwatch() {
     while inotifywait -e close_write $1 || true; do clear; eval $2; done
   fi
 }
+
+autoload zmv
+
+vcs_prompt_info() {
+  local ref='self.change_id().shortest(3)'
+  local empty_color="$fg[yellow]"
+  local nonempty_color="$fg[magenta]"
+
+  jj_prompt_template_raw "if(self.empty(), \"%{$empty_color%}\", \"%{$nonempty_color%}\") ++ $ref ++ \" \"" \
+  || git_prompt_status
+}
+
 # this is the prompt from the mh.omz-theme theme with the $HOST added
 export PROMPT="[%{$fg[$NCOLOR]%}%B%n%b%{$reset_color%}@$HOST:%{$fg[red]%}%30<...<%~%<<%{$reset_color%}]%($)"
+export RPROMPT='$(vcs_prompt_info)%{$reset_color%}'
