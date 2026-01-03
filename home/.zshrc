@@ -225,7 +225,7 @@ vcs_prompt_info() {
   local nonempty_color="$fg[magenta]"
 
   jj_prompt_template_raw "if(self.empty(), \"%{$empty_color%}\", \"%{$nonempty_color%}\") ++ $ref ++ \" \"" \
-  || git_prompt_status
+  || git_prompt_info
 }
 
 # this is the prompt from the mh.omz-theme theme with the $HOST added
