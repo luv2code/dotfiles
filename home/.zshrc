@@ -37,6 +37,9 @@ plugins=(git debian vi-mode history wd deno rust bun terraform jj)
 # opt out of dotnet telemetry
 DOTNET_CLI_TELEMETRY_OPTOUT=true
 
+# workaround for git_prompt_info not working inside the vcs_prompt_info function
+zstyle ':omz:alpha:lib:git' async-prompt no 
+
 source $ZSH/oh-my-zsh.sh
 apt_pref='aptitude'
 
