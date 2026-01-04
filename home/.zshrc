@@ -227,10 +227,11 @@ vcs_prompt_info() {
   local empty_color="$fg[yellow]"
   local nonempty_color="$fg[magenta]"
 
-  jj_prompt_template_raw "if(self.empty(), \"%{$empty_color%}\", \"%{$nonempty_color%}\") ++ $ref ++ \" \"" \
+  jj_prompt_template_raw \
+		"if(self.empty(), \"(%{$empty_color%}\", \"*%{$nonempty_color%}\") ++ $ref ++ \"%{$reset_color%}) \"" \
   || git_prompt_info
 }
 
 # this is the prompt from the mh.omz-theme theme with the $HOST added
 export PROMPT="[%{$fg[$NCOLOR]%}%B%n%b%{$reset_color%}@$HOST:%{$fg[red]%}%30<...<%~%<<%{$reset_color%}]%($)"
-export RPROMPT='$(vcs_prompt_info)%{$reset_color%}'
+export RPROMPT='$(vcs_prompt_info)'
