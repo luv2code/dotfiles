@@ -228,7 +228,7 @@ vcs_prompt_info() {
   local nonempty_color="$fg[magenta]"
 
   jj_prompt_template_raw \
-		"if(self.empty(), \"(%{$empty_color%}\", \"(%{$nonempty_color%}\") ++ $ref ++ \"%{$reset_color%}) \"" \
+		"if(self.empty(), \"%{$empty_color%}\", \"%{$nonempty_color%}\") ++ $ref ++ \"%{$reset_color%} \"" \
   || git_prompt_info
 }
 
