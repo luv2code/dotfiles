@@ -32,13 +32,19 @@ ZSH_THEME="mh"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git debian vi-mode history wd deno rust bun terraform jj)
+plugins=(git jj debian vi-mode history wd deno rust bun terraform)
 
 # opt out of dotnet telemetry
 DOTNET_CLI_TELEMETRY_OPTOUT=true
 
 # workaround for git_prompt_info not working inside the vcs_prompt_info function
 zstyle ':omz:alpha:lib:git' async-prompt no 
+
+if type mise &>/dev/null; then
+	eval "$(mise activate zsh)"
+else
+	echo Mise not found. Install from https://mise.jdx.dev
+fi
 
 source $ZSH/oh-my-zsh.sh
 apt_pref='aptitude'
@@ -86,12 +92,6 @@ alias -s {pdf,epub,rtx,html,htm}=xdg-open
 
 if [ "$TERM_PROGRAM" = "WezTerm" ]; then
   alias -s {svg,jpg,png,bmp,gif}='wezterm imgcat'  
-fi
-
-if type mise &>/dev/null; then
-	eval "$(mise activate zsh)"
-else
-	echo Mise not found. Install from https://mise.jdx.dev
 fi
 
 # eza (better `ls`)
